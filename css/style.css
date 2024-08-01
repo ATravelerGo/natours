@@ -137,6 +137,10 @@ body {
   margin-bottom: 4rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -156,8 +160,13 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem;
+}
+
+.section-stories {
+  position: relative;
+  padding: 15rem 0;
 }
 
 .btn:link, .btn:visited {
@@ -169,6 +178,8 @@ body {
   transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -188,6 +199,13 @@ body {
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn::after {
   content: "";
@@ -395,6 +413,72 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  position: relative;
+}
+.story__shape {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  clip-path: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  float: left;
+  transform: translateX(-3rem) skewX(12deg);
+}
+.story__image {
+  height: 100%;
+  transition: all 0.5s;
+  transform: translateX(-4rem) scale(1.2);
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+.story:hover .story__caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.story:hover .story__image {
+  filter: blur(5px);
+  transform: scale(1) translateX(-4rem);
+}
+.story__text {
+  transform: skewX(12deg);
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+}
+.bg-video__content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .header {
