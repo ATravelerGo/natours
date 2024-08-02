@@ -169,6 +169,17 @@ body {
   padding: 15rem 0;
 }
 
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.book {
+  background-image: url("../../img/nat-10.jpg");
+  background-size: cover;
+  height: 50rem;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
