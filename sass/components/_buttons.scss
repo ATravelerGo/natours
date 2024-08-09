@@ -1,5 +1,5 @@
 .btn {
-  &:link, &:visited {
+ &, &:link, &:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -22,7 +22,8 @@
     }
   }
 
-  &:active {
+  &:active,&:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
 
