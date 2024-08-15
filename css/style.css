@@ -5,6 +5,23 @@ Colors:
     Medium green:#55c57a
     Dark green: #28b485
 */
+/*
+0-600  phone
+600-900 tablet portrait
+900-1200  table landscape
+1200-1800   is where our normal styles apply 这是我们写的样式的范围
+1800+     big desktop
+*/
+/*
+参数：
+  phone
+  tab-port
+  tab-land
+  big-desktop
+
+  1em=16px
+
+*/
 *,
 *::before,
 *::after {
@@ -15,6 +32,26 @@ Colors:
 
 html {
   font-size: 62.5%;
+}
+@media (max-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 30%;
+  }
 }
 
 body {
