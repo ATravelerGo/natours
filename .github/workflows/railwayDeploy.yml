@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: 克隆要部署的仓库代码
-        run: |
-          git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/natours.git
-          ls
+        run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/natours.git
+      - run: ls
+
         
