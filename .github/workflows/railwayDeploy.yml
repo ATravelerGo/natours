@@ -1,1 +1,17 @@
 
+name: railway部署
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 克隆要部署的仓库代码
+        run: |
+          git clone https://username:${{ SECRET }}github.com/ATravelerGo/nginx.git
+          ls
+        
