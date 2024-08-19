@@ -34,10 +34,10 @@ jobs:
       - run: ls
         name: '查看路径'
 
-          #      - uses: actions/checkout@v4
-#      - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/nginx.git
-#      - run: |
-#          ls
+      - uses: actions/checkout@v4
+      - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/nginx.git
+      - run: |
+          ls
   
   
   
