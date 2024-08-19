@@ -45,7 +45,12 @@ jobs:
         name: '查看路径'
         working-directory: nginx/site
   
-  
+      - run: |
+          git add .
+          git commit -m "开始部署喽"
+          git push
+        working-directory: nginx
+        name: "提交代码"
   
          
        
