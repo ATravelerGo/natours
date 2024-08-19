@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "github/workflows/railwayDeploy.yml"
 
 jobs:
   build:
@@ -12,9 +14,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: 克隆要部署的仓库代码
-        run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/natours.git
+      - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/natours.git
       - run: ls
+        working-directory: natours
 
 
         
