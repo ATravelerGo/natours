@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "./github/workflows/railwayDeploy.yml"
+
 
 jobs:
   build:
