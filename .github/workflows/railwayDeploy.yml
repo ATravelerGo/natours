@@ -7,15 +7,39 @@ on:
 
 
 jobs:
-  build:
+  cacheNatoursCode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: '拉取代码'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 'natours'
+          path: './'
+        name: '做artifact存储'
+
+
+
+  deploy:
 
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/nginx.git
-      - run: | 
-          ls
+      - uses: actions/download-artifact@v4
+        with:
+          name: 'natours'
+          path: './'
+        name: '获取artifact'
+      - run: ls
+        name: '查看路径'
+
+          #      - uses: actions/checkout@v4
+#      - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/nginx.git
+#      - run: |
+#          ls
+  
+  
+  
          
        
 
