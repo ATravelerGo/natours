@@ -46,6 +46,8 @@ jobs:
         working-directory: nginx/site
   
       - run: |
+          git config --global user.email "xiaokeai1833103@gmail.com"
+          git config --global user.name "chen"
           git add .
           git commit -m "开始部署喽"
           git push
