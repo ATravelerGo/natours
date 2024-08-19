@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - "github/workflows/railwayDeploy.yml"
+      - "./github/workflows/railwayDeploy.yml"
 
 jobs:
   build:
