@@ -26,21 +26,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: 'natours'
-          path: './'
-        name: '获取artifact'
-      - run: ls
-        name: '查看路径'
+
 
       - uses: actions/checkout@v4
-
       - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/nginx.git
       - run: |
           rm -rf ./*
-          mv ../../* ./
           ls
+        working-directory: nginx/site
+
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: 'natours'
+          path: 'nginx/site'
+        name: '获取artifact'
+      - run: ls
+        name: '查看路径'
         working-directory: nginx/site
   
   
