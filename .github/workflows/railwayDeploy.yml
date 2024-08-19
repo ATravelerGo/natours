@@ -14,7 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: git clone https://username:${{ secrets.SECRET }}@github.com/ATravelerGo/natours.git
-      - run: ls
+      - run: | 
+          ls
+          cd ..
+          ls
         working-directory: natours
 
 
