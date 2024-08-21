@@ -4,13 +4,16 @@
   "description": "大自然",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass  sass/main.scss   css/style.css -w"
+    "compile:sass": "sass  sass/main.scss   css/style.css -w",
+    "build": "vite build",
+    "preview" : "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "vite": "^5.4.2"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
